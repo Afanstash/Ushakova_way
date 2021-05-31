@@ -1,0 +1,15 @@
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-white;
+  overflow: hidden;
+  max-width: $desktop-width-only;
+
+  @media (max-width: $tablet-max-width) {
+    max-width: $tablet-width;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    max-width: $mobile-width;
+  }
+}

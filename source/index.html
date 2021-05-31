@@ -12,35 +12,43 @@
   </head>
   <body class="page__body">
 
-    <header class="page-header">
-      <div class="container">
-        <div class="page-header__wrap">
-          <a class="page-header__logo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-              <img class="page-header__logo-img" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Way">
-            </picture>
-          </a>
+    <div class="wrap">
+      <header class="page-header">
+        <div class="container page-header__block">
+          <div class="page-header__logo-wrap">
+            <a class="page-header__logo-link">
+              <img class="page-header__logo-img" src="img/logotype-desktop.svg" width="57" height="22" alt="Логотип Way">
+            </a>
+          </div>
+          <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
+            <button type="button" class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="#" class="main-nav__link">О путешествии</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link">Цены</a></li>
+              </ul>
+            </div>
+            <p class="main-nav__phone phone">
+              <a class="phone__link" href="tel:+749978468446">+7 (499) -784-684-46</a>
+            </p>
+          </nav>
         </div>
-        <nav class="page-header__main-nav main-nav main-nav--closed">
-        </nav>
-      </div>
-    </header>
+      </header>
 
-    <main class="page-main">
-      <section></section>
-      <div class="container">
+      <main class="page-main">
+        <section></section>
+        <div class="container">
 
-      </div>
+        </div>
 
-    </main>
+      </main>
 
-    <footer class="page-footer">
-      <div class="container">
+      <footer class="page-footer">
+        <div class="container">
 
-      </div>
-    </footer>
+        </div>
+      </footer>
+    </div>
 
     <script src="js/script.min.js"></script>
 

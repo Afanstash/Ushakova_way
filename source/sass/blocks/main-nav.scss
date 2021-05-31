@@ -1,0 +1,222 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
+    @include button-icon($color-accent-basic);
+    position: absolute;
+    top: -50px;
+    right: 0;
+    height: 50px;
+    width: 72px;
+    display: block;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent-hover;
+    }
+
+    &:active {
+      background-color: $color-accent-basic;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 50px;
+  }
+
+  &::before {
+    @media (max-width: $tablet-max-width) {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 21px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../../img/menu.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      left: 10px;
+    }
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  @media (max-width: $tablet-max-width) {
+    @include button-icon(transparent);
+    position: absolute;
+    top: -50px;
+    right: 0;
+    height: 50px;
+    width: 72px;
+    display: block;
+
+    &:hover,
+    &:focus {
+      background-color: $color-light;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 50px;
+  }
+
+  &::before {
+    @media (max-width: $tablet-max-width) {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 25px;
+      width: 24px;
+      height: 25px;
+      background-image: url("../../img/cross.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      left: 13px;
+    }
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  @media (max-width: $tablet-max-width) {
+    z-index: 10;
+    min-height: 100vh;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: $desktop-width-only) {
+    flex-grow: 1;
+  }
+}
+
+.main-nav__list {
+  @include off-list;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width: $desktop-width-only) {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 52px;
+    margin-right: 0;
+    flex-direction: column;
+  }
+}
+
+.main-nav__item {
+  margin-left: 40px;
+
+  @media (max-width: $tablet-max-width) {
+    margin: 30px 0 0;
+  }
+}
+
+.main-nav__link {
+  @include off-text-decoration;
+  padding: 36px 0;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-accent-basic;
+  }
+
+  &:active {
+    color: $color-black;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding: 17px 35px 17px 16px;
+    background-color: $color-light;
+    color: $color-dark-grey;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 19px;
+      right: 16px;
+      background-image: url("../../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      background-image: url("../../img/arrow-down-hover.svg");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent-basic;
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: $color-accent-hover;
+      color: $color-white;
+    }
+  }
+}
+
+.main-nav__phone {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}

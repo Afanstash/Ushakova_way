@@ -1,0 +1,47 @@
+.phone {
+  @include off-margin;
+}
+
+.phone__link {
+  height: 90px;
+  color: inherit;
+  font-size: 18px;
+  line-height: 32px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-accent-basic;
+  }
+
+  &:active {
+    color: $color-black;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: -6px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../../img/phone-hover.svg");
+  }
+
+  &:active::before {
+    background-image: url("../../img/phone-active.svg");
+  }
+}

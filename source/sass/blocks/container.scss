@@ -1,18 +1,7 @@
 .container {
-  width: 100%;
-  max-width: 320px;
   margin: 0 auto;
-  background-color: white;
-  box-shadow: 0 5px 15px red;
-  overflow: hidden;
 
-  @media (min-width: $tablet-width) {
-    max-width: 768px;
-    box-shadow: 0 5px 15px green;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 1920px;
-    box-shadow: 0 5px 15px blue;
+  @media (min-width: $desktop-width-only) {
+    width: $desktop-content-width;
   }
 }
