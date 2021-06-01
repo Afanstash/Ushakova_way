@@ -112,13 +112,19 @@
 .main-nav--nojs .main-nav__list {
   @media (max-width: $tablet-max-width) {
     display: block;
+    margin-top: 82px;
   }
 }
 
 .main-nav--opened .main-nav__wrapper {
   @media (max-width: $tablet-max-width) {
+    position: absolute;
+    bottom: -969px;
+    left: 0;
+    right: 0;
     z-index: 10;
     min-height: 100vh;
+    background-color: white;
   }
 }
 
@@ -141,8 +147,7 @@
   }
 
   @media (max-width: $tablet-max-width) {
-    margin-top: 52px;
-    margin-right: 0;
+    margin: 52px 0;
     flex-direction: column;
   }
 }

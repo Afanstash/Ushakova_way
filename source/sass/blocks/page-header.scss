@@ -1,5 +1,9 @@
 .page-header {
   color: $color-darkest;
+
+  @media (min-width: $desktop-width-only) {
+    min-height: 99px;
+  }
 }
 
 .page-header__main-nav {

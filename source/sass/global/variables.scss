@@ -5,13 +5,16 @@ $color-darkest: #141517;
 $color-dark: #2c2e3f;
 $color-accent-basic: #fe7865;
 $color-accent-hover: #f17d4b;
+$color-accent-basic-active-opacity-03: rgba(254, 120, 101, 0.3);
 $color-light: #fbf8f8;
 $color-black: #000000;
 $color-dark-grey: #48494d;
 
+$color-background-announcement: #5b85a6;
+
 // Viewports
 
-$desktop-width-only: 1920px;//уточнить 1024px
+$desktop-width-only: 1920px;
 $desktop-content-width: 1170px;
 $tablet-max-width: 1919px;
 $tablet-width: 768px;
