@@ -1,0 +1,51 @@
+.corporate-travel {
+  padding-left: 69px;
+  width: 390px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 29px 0;
+    width: 100%;
+    text-align: center;
+    grid-column: 1 / -1;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      right: 21px;
+      width: 726px;
+      height: 1px;
+      background-color: $color-border-footer;
+    }
+  }
+}
+
+.corporate-travel__title {
+  @include off-margin;
+  margin-bottom: 24px;
+  color: $color-darkest;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.corporate-travel__text {
+  @include off-margin;
+  color: $color-footer-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+
+  @media (max-width: $tablet-max-width) {
+    margin: 0 21px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin: 0 15px;
+  }
+}

@@ -1,0 +1,70 @@
+.next-travel {
+  width: 390px;
+  padding-left: 22px;
+  position: relative;
+
+  @media (max-width: $tablet-max-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: -26px;
+      width: 1px;
+      height: 176px;
+      background-color: $color-border-footer;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 30px;
+  }
+}
+
+.next-travel__title {
+  @include off-margin;
+  margin-bottom: 21px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $color-darkest;
+}
+
+.next-travel__list {
+  @include off-list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.next-travel__item {
+  margin-bottom: 10px;
+  margin-right: 17px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 14px;
+  }
+}
+
+.next-travel__link {
+  @include off-text-decoration;
+  display: block;
+  min-height: 17px;
+  width: 110px;
+  color: $color-footer-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  &:hover,
+  &:focus {
+    color: $color-black;
+  }
+
+  &:active {
+    color: $color-accent-basic;
+  }
+}
