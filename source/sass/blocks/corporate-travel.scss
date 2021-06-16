@@ -14,9 +14,16 @@
       position: absolute;
       top: -2px;
       right: 21px;
-      width: 726px;
+      width: 95%;
       height: 1px;
       background-color: $color-border-footer;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    &::before {
+      right: 21px;
+      width: 90%;
     }
   }
 }

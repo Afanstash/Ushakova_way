@@ -1,10 +1,10 @@
 .next-travel {
+  padding-left: 21px;
   width: 390px;
-  padding-left: 22px;
   position: relative;
 
-  @media (max-width: $tablet-max-width) {
-    &::before {
+  &::before {
+    @media (max-width: $tablet-max-width) {
       content: "";
       position: absolute;
       top: 1px;
@@ -15,8 +15,21 @@
     }
   }
 
+  &::after {
+    @media (max-width: $mobile-max-width) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 11px;
+      width: 90%;
+      height: 1px;
+      background-color: $color-border-footer;
+    }
+  }
+
   @media (max-width: $mobile-max-width) {
-    padding-left: 30px;
+    padding: 0;
+    width: 100%;
   }
 }
 
@@ -27,37 +40,60 @@
   font-size: 18px;
   line-height: 32px;
   color: $color-darkest;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 30px;
+  }
+}
+
+.next-travel__block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-max-width) {
+    justify-content: center;
+  }
 }
 
 .next-travel__list {
   @include off-list;
+  padding-left: 9px;
+  width: calc(100% / 3);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+
+  &:first-child {
+    padding-left: 0;
+
+    @media (max-width: $mobile-max-width) {
+      padding-right: 6px;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 3px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    width: calc(100% / 2);
+  }
 }
 
 .next-travel__item {
   margin-bottom: 10px;
-  margin-right: 17px;
-
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  @media (max-width: $tablet-max-width) {
-    margin-right: 14px;
-  }
 }
 
 .next-travel__link {
   @include off-text-decoration;
-  display: block;
-  min-height: 17px;
-  width: 110px;
   color: $color-footer-text;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+  display: flex;
 
   &:hover,
   &:focus {
@@ -66,5 +102,9 @@
 
   &:active {
     color: $color-accent-basic;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    justify-content: center;
   }
 }
