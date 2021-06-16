@@ -803,16 +803,9 @@ img {
       margin-bottom: 29px;
       margin-left: -8px; } }
 
-.our-contacts__mail {
-  margin: 0;
+.our-contacts__mail-link {
   margin-bottom: 20px;
   margin-left: 41px;
-  color: #fe7865; }
-  @media (max-width: 767px) {
-    .our-contacts__mail {
-      margin-bottom: 13px; } }
-
-.our-contacts__mail-link {
   display: block;
   position: relative;
   color: #fe7865;
@@ -824,26 +817,10 @@ img {
     color: #000000; }
   .our-contacts__mail-link:active {
     color: #fe7865; }
-  .our-contacts__mail-link::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -41px;
-    width: 26px;
-    height: 20px;
-    background-image: url("../../img/mail.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0; }
-  .our-contacts__mail-link:hover::before, .our-contacts__mail-link:focus::before {
-    background-image: url("../../img/mail-active.svg"); }
-  .our-contacts__mail-link:active::before {
-    background-image: url("../../img/mail-hover.svg"); }
   @media (max-width: 767px) {
     .our-contacts__mail-link {
-      text-decoration: none; }
-      .our-contacts__mail-link::before {
-        top: -4px;
-        left: -10px; } }
+      text-decoration: none;
+      margin-bottom: 13px; } }
 
 .our-contacts__phone {
   margin: 0;
